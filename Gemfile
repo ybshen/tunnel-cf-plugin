@@ -4,7 +4,7 @@ source "http://rubygems.org"
 # WARNING: Separate from the Gemspec. Please update both files
 #############
 
-gem "cfoundry", :git => "git://github.com/cloudfoundry/vmc-lib.git"
+gem "cfoundry", :git => "git://github.com/cloudfoundry/vmc-lib.git", :submodules => true
 gem "vmc", :git => "git://github.com/cloudfoundry/vmc.git"
 gem "tunnel-vmc-plugin", :path => "."
 
