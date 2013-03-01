@@ -12,8 +12,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "auto_tagger"
-  gem "gerrit-cli"
+  gem "gem-release"
 end
 
 group :test do
