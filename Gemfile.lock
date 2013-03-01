@@ -26,7 +26,7 @@ GIT
 PATH
   remote: .
   specs:
-    tunnel-vmc-plugin (0.2.1.rc1)
+    tunnel-vmc-plugin (0.2.1.rc3)
       addressable (~> 2.2)
       caldecott-client (~> 0.0.2)
       cfoundry (~> 0.5.0)
