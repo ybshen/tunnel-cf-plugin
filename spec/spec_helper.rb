@@ -11,5 +11,5 @@ require "#{SPEC_ROOT}/../lib/tunnel-vmc-plugin/plugin"
 RSpec.configure do |c|
   c.include Fake::FakeMethods
   c.mock_with :rr
-  c.include VMC::TestSupport::FakeHomeDir
+  c.include FakeHomeDir
 end
