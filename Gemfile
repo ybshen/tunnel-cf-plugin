@@ -6,14 +6,9 @@ source "http://rubygems.org"
 
 gem "cfoundry", :git => "git://github.com/cloudfoundry/vmc-lib.git", :submodules => true
 gem "vmc", :git => "git://github.com/cloudfoundry/vmc.git"
-gem "tunnel-vmc-plugin", :path => "."
 
 group :development, :test do
   gem "rake"
-end
-
-group :development do
-  gem "gem-release"
 end
 
 group :test do
