@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/cloudfoundry/tunnel-vmc-plugin.png)](https://travis-ci.org/cloudfoundry/tunnel-vmc-plugin)
+[![Build Status](https://travis-ci.org/cloudfoundry/tunnel-cf-plugin.png)](https://travis-ci.org/cloudfoundry/tunnel-cf-plugin)
 
 ## Tunnel
 ### Info
@@ -6,7 +6,7 @@ This plugin allows you to connect to a Cloud Foundry service using your own comm
 
 ### Installation
 ```
-gem install tunnel-vmc-plugin
+gem install tunnel-cf-plugin
 ```
 
 ### Usage
