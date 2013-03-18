@@ -1,27 +1,35 @@
 GIT
+  remote: git://github.com/cloudfoundry/cf.git
+  revision: e574b781732e2cad3d186e3d46fe60991ff81697
+  specs:
+    cf (0.5.1.rc4)
+      cfoundry (>= 0.5.3.rc5, < 0.6)
+      clouseau (~> 0.0)
+      interact (~> 0.5)
+      json_pure (~> 1.6)
+      mothership (>= 0.5.1, < 1.0)
+      multi_json (~> 1.3)
+
+GIT
   remote: git://github.com/cloudfoundry/vmc-lib.git
-  revision: ec802497a1740a8a96a8df47b5b4455353400a40
+  revision: 8d256c633baaa01ac82d1a27475910f956801cfb
   submodules: true
   specs:
-    cfoundry (0.5.3.rc4)
-      cf-uaa-lib (~> 1.3.8)
+    cfoundry (0.5.3.rc5)
+      cf-uaa-lib (~> 1.3.10)
       multi_json (~> 1.3)
       multipart-post (~> 1.1)
       rubyzip (~> 0.9)
 
-GIT
-  remote: git://github.com/cloudfoundry/vmc.git
-  revision: 94374c63ea6b885148b0da5e0ef61574438ea980
+PATH
+  remote: .
   specs:
-    vmc (0.5.0.rc2)
-      cfoundry (>= 0.5.1.rc5, < 0.6)
-      clouseau (~> 0.0)
-      interact (~> 0.5)
-      json_pure (~> 1.6)
-      manifests-vmc-plugin (~> 0.6)
-      mothership (>= 0.5.1, < 1.0)
-      multi_json (~> 1.3)
-      tunnel-vmc-plugin (~> 0.2)
+    tunnel-cf-plugin (0.2.2)
+      addressable (~> 2.2)
+      caldecott-client (~> 0.0.2)
+      cfoundry (>= 0.5.3.rc5, < 0.6)
+      rest-client (~> 1.6)
+      uuidtools (~> 2.1)
 
 GEM
   remote: http://rubygems.org/
@@ -29,16 +37,15 @@ GEM
     addressable (2.3.3)
     caldecott-client (0.0.2)
       multi_json (~> 1.3)
-    cf-uaa-lib (1.3.8)
+    cf-uaa-lib (1.3.10)
       multi_json
     clouseau (0.0.2)
       rubyzip (~> 0.9.9)
     crack (0.3.2)
     diff-lcs (1.2.1)
+    fakefs (0.4.2)
     interact (0.5.2)
     json_pure (1.7.7)
-    manifests-vmc-plugin (0.6.1)
-      cfoundry (~> 0.5.0)
     mime-types (1.21)
     mothership (0.5.1)
     multi_json (1.6.1)
@@ -51,17 +58,11 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    rspec-core (2.13.0)
+    rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.0)
     rubyzip (0.9.9)
-    tunnel-vmc-plugin (0.2.0)
-      addressable (~> 2.2)
-      caldecott-client (~> 0.0.2)
-      cfoundry (~> 0.5.0)
-      rest-client (~> 1.6)
-      uuidtools (~> 2.1)
     uuidtools (2.1.3)
     webmock (1.10.1)
       addressable (>= 2.2.7)
@@ -71,9 +72,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cf!
   cfoundry!
+  fakefs (~> 0.4.2)
   rake
   rr (~> 1.0)
   rspec (~> 2.11)
-  vmc!
+  tunnel-cf-plugin!
   webmock (~> 1.9)

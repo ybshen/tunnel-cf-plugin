@@ -10,7 +10,7 @@ require 'sinatra'
 require 'json'
 require 'eventmachine'
 
-port = ENV['VMC_APP_PORT']
+port = ENV['CF_APP_PORT']
 port ||= 8081
 
 # add vcap specific stuff to Caldecott
@@ -24,13 +24,13 @@ class VcapHttpTunnel < Caldecott::Server::HttpTunnel
   end
 
   get '/services' do
-    services_env = ENV['VMC_SERVICES']
+    services_env = ENV['CF_SERVICES']
     return "no services env" if services_env.nil? or services_env.empty?
     services_env
   end
 
   get '/services/:service' do |service_name|
-    services_env = ENV['VMC_SERVICES']
+    services_env = ENV['CF_SERVICES']
     not_found if services_env.nil?
 
     services = JSON.parse(services_env)

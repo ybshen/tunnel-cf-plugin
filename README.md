@@ -14,7 +14,7 @@ gem install tunnel-cf-plugin
 tunnel [INSTANCE] [CLIENT]        Create a local tunnel to a service.
 ```
 
-You can add support for other command-line clients by providing a `~/.vmc/clients.yml` file with the following format:
+You can add support for other command-line clients by providing a `~/.cf/clients.yml` file with the following format:
 
 ```yaml
 service_name:

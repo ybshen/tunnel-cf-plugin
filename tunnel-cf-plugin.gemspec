@@ -5,11 +5,11 @@
 #############
 
 $:.push File.expand_path("../lib", __FILE__)
-require "tunnel-vmc-plugin/version"
+require "tunnel-cf-plugin/version"
 
 Gem::Specification.new do |s|
-  s.name        = "tunnel-vmc-plugin"
-  s.version     = VMCTunnel::VERSION.dup
+  s.name        = "tunnel-cf-plugin"
+  s.version     = CFTunnelPlugin::VERSION.dup
   s.authors     = ["Alex Suraci"]
   s.email       = ["asuraci@vmware.com"]
   s.homepage    = "http://cloudfoundry.com/"
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
     tunnel.
   }
 
-  s.rubyforge_project = "tunnel-vmc-plugin"
+  s.rubyforge_project = "tunnel-cf-plugin"
 
   s.files         = %w{Rakefile} + Dir.glob("{lib,helper-app,config}/**/*")
   s.test_files    = Dir.glob("spec/**/*")

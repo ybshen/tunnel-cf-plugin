@@ -277,7 +277,7 @@ class CFTunnel
         :dst_host => conn_info["hostname"],
         :dst_port => conn_info["port"],
         :log_file => STDOUT,
-        :log_level => ENV["VMC_TUNNEL_DEBUG"] || "ERROR",
+        :log_level => ENV["CF_TUNNEL_DEBUG"] || "ERROR",
         :auth_token => auth,
         :quiet => true
       })

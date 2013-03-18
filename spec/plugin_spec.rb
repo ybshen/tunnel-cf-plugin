@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe VMCTunnel::Tunnel do
+describe CFTunnelPlugin::Tunnel do
   describe "#tunnel_clients" do
-    context "when the user has a custom clients.yml in their vmc directory" do
-      use_fake_home_dir { "#{SPEC_ROOT}/fixtures/fake_home_dirs/with_custom_clients" }
-
+    context "when the user has a custom clients.yml in their cf directory" do
       it "overrides the default client config with the user's customizations" do
+        stub_const('CF::CONFIG_DIR', "#{SPEC_ROOT}/fixtures/fake_home_dirs/with_custom_clients")
+
         expect(subject.tunnel_clients["postgresql"]).to eq({
           "psql" => {
             "command"=>"-h ${host} -p ${port} -d ${name} -U ${user} -w",
@@ -17,6 +17,8 @@ describe VMCTunnel::Tunnel do
 
     context "when the user does not have a custom clients.yml" do
       it "returns the default client config" do
+        stub_const('CF::CONFIG_DIR', '.')
+
         expect(subject.tunnel_clients["postgresql"]).to eq({
           "psql" => {
             "command"=>"-h ${host} -p ${port} -d ${name} -U ${user} -w",

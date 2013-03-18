@@ -1,9 +1,9 @@
-require "vmc/cli"
-require "tunnel-vmc-plugin/tunnel"
+require "cf/cli"
+require "tunnel-cf-plugin/tunnel"
 
-module VMCTunnel
-  class Tunnel < VMC::CLI
-    CLIENTS_FILE = "#{VMC::CONFIG_DIR}/tunnel-clients.yml"
+module CFTunnelPlugin
+  class Tunnel < CF::CLI
+    CLIENTS_FILE = "tunnel-clients.yml"
     STOCK_CLIENTS = File.expand_path("../../../config/clients.yml", __FILE__)
 
     desc "Create a local tunnel to a service."
@@ -67,7 +67,8 @@ module VMCTunnel
     def tunnel_clients
       return @tunnel_clients if @tunnel_clients
       stock_config = YAML.load_file(STOCK_CLIENTS)
-      custom_config_file = File.expand_path(CLIENTS_FILE)
+      custom_config_file = File.expand_path("#{CF::CONFIG_DIR}/.cf/#{CLIENTS_FILE}")
+
       if File.exists?(custom_config_file)
         custom_config = YAML.load_file(custom_config_file)
         @tunnel_clients = deep_merge(stock_config, custom_config)
