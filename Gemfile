@@ -6,7 +6,7 @@ source "http://rubygems.org"
 
 gemspec
 
-gem "cfoundry", :git => "git://github.com/cloudfoundry/vmc-lib.git", :submodules => true
+gem "cfoundry", :git => "git://github.com/cloudfoundry/cfoundry.git", :submodules => true
 gem "cf", :git => "git://github.com/cloudfoundry/cf.git"
 
 group :development, :test do

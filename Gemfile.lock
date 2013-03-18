@@ -11,7 +11,7 @@ GIT
       multi_json (~> 1.3)
 
 GIT
-  remote: git://github.com/cloudfoundry/vmc-lib.git
+  remote: git://github.com/cloudfoundry/cfoundry.git
   revision: 8d256c633baaa01ac82d1a27475910f956801cfb
   submodules: true
   specs:
