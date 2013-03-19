@@ -29,7 +29,7 @@ module CFTunnelPlugin
       fail "No services available for tunneling." if instances.empty?
 
       instance = input[:instance, instances.sort_by(&:name)]
-      vendor = v2? ? instance.service_plan.service.label : instance.vendor
+      vendor = instance.service_plan.service.label
       clients = tunnel_clients[vendor] || {}
       client_name = input[:client, clients]
 
