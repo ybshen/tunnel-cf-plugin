@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: git://github.com/cloudfoundry/cfoundry.git
-  revision: 8d256c633baaa01ac82d1a27475910f956801cfb
+  revision: f51b77676a2a7f4d4893c959b0a869238b05fd02
   submodules: true
   specs:
-    cfoundry (0.5.3.rc5)
+    cfoundry (0.6.0.rc2)
       cf-uaa-lib (~> 1.3.10)
       multi_json (~> 1.3)
       multipart-post (~> 1.1)
@@ -24,10 +24,10 @@ GIT
 PATH
   remote: .
   specs:
-    tunnel-cf-plugin (0.2.2)
+    tunnel-cf-plugin (0.3.0.rc1)
       addressable (~> 2.2)
       caldecott-client (~> 0.0.2)
-      cfoundry (>= 0.5.3.rc5, < 0.6)
+      cfoundry (>= 0.6.0.rc1, < 0.7)
       rest-client (~> 1.6)
       uuidtools (~> 2.1)
 
@@ -48,7 +48,7 @@ GEM
     json_pure (1.7.7)
     mime-types (1.21)
     mothership (0.5.1)
-    multi_json (1.6.1)
+    multi_json (1.7.1)
     multipart-post (1.2.0)
     rake (10.0.3)
     rest-client (1.6.7)
