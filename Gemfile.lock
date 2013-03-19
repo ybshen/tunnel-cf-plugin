@@ -1,18 +1,20 @@
 GIT
   remote: git://github.com/cloudfoundry/cf.git
-  revision: e574b781732e2cad3d186e3d46fe60991ff81697
+  revision: c21e7d2c7b3722008007b793644c5405fcd3136d
   specs:
-    cf (0.5.1.rc4)
-      cfoundry (>= 0.5.3.rc5, < 0.6)
+    cf (0.6.0.rc2)
+      cfoundry (>= 0.6.0.rc2, < 0.7)
       clouseau (~> 0.0)
       interact (~> 0.5)
       json_pure (~> 1.6)
+      manifests-cf-plugin (>= 0.7.0.rc1, < 0.8)
       mothership (>= 0.5.1, < 1.0)
       multi_json (~> 1.3)
+      tunnel-cf-plugin (>= 0.3.0.rc1, < 0.4)
 
 GIT
   remote: git://github.com/cloudfoundry/cfoundry.git
-  revision: f51b77676a2a7f4d4893c959b0a869238b05fd02
+  revision: 049f9f70842ffee4c6d60c2d8d000f6dd7647e7e
   submodules: true
   specs:
     cfoundry (0.6.0.rc2)
@@ -46,6 +48,8 @@ GEM
     fakefs (0.4.2)
     interact (0.5.2)
     json_pure (1.7.7)
+    manifests-cf-plugin (0.7.0.rc1)
+      cfoundry (>= 0.5.3.rc5, < 0.6)
     mime-types (1.21)
     mothership (0.5.1)
     multi_json (1.7.1)
@@ -64,7 +68,7 @@ GEM
     rspec-mocks (2.13.0)
     rubyzip (0.9.9)
     uuidtools (2.1.3)
-    webmock (1.10.1)
+    webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
 
