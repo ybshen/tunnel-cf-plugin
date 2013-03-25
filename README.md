@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/cloudfoundry/tunnel-cf-plugin.png)](https://travis-ci.org/cloudfoundry/tunnel-cf-plugin)
+[![Gem Version](https://badge.fury.io/rb/tunnel-cf-plugin.png)](http://badge.fury.io/rb/tunnel-cf-plugin)
 
 ## Tunnel
 ### Info
