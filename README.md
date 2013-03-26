@@ -25,3 +25,4 @@ service_name:
     environment:
       - ENV_VAR_NAME=env_var_value
 ```
+
