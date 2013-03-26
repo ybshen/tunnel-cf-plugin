@@ -1,3 +1,3 @@
 module CFTunnelPlugin
-  VERSION = "0.2.3.rc1".freeze
+  VERSION = "0.3.0.rc4".freeze
 end
