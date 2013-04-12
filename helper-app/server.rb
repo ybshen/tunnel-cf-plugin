@@ -24,19 +24,19 @@ class VcapHttpTunnel < Caldecott::Server::HttpTunnel
   end
 
   get '/services' do
-    services_env = ENV['CF_SERVICES']
+    services_env = ENV['VCAP_SERVICES']
     return "no services env" if services_env.nil? or services_env.empty?
     services_env
   end
 
   get '/services/:service' do |service_name|
-    services_env = ENV['CF_SERVICES']
+    services_env = ENV['VCAP_SERVICES']
     not_found if services_env.nil?
 
-    services = JSON.parse(services_env)
+    services = JSON.parse(services_env).values.flatten(1)
     service = services.find { |s| s["name"] == service_name }
     not_found if service.nil?
-    service["options"].to_json
+    service["credentials"].to_json
   end
 end
 

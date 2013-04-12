@@ -128,7 +128,7 @@ class CFTunnel
 
     app = @client.app
     app.name = HELPER_NAME
-    app.command = "bundle exec ruby server.rb -p $VCAP_APP_PORT"
+    app.command = "bundle exec ruby server.rb"
     app.total_instances = 1
     app.memory = 128
     app.env = { "CALDECOTT_AUTH" => token }
