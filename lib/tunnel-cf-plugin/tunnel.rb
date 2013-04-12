@@ -128,11 +128,9 @@ class CFTunnel
 
     app = @client.app
     app.name = HELPER_NAME
-    app.framework = @client.framework_by_name("sinatra")
-    app.runtime = @client.runtime_by_name("ruby19")
     app.command = "bundle exec ruby server.rb -p $VCAP_APP_PORT"
     app.total_instances = 1
-    app.memory = 64
+    app.memory = 128
     app.env = { "CALDECOTT_AUTH" => token }
 
     if is_v2

@@ -10,7 +10,7 @@ require 'sinatra'
 require 'json'
 require 'eventmachine'
 
-port = ENV['CF_APP_PORT']
+port = ENV['PORT']
 port ||= 8081
 
 # add vcap specific stuff to Caldecott
