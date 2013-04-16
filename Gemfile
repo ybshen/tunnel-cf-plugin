@@ -6,10 +6,10 @@ source "http://rubygems.org"
 
 gemspec
 
-gem "cfoundry", :git => "git://github.com/cloudfoundry/cfoundry.git", :submodules => true
-gem "cf", :git => "git://github.com/cloudfoundry/cf.git"
+gem "cfoundry"#, :git => "git://github.com/cloudfoundry/cfoundry.git", :submodules => true
 
 group :development, :test do
+  gem "cf", :git => "git://github.com/cloudfoundry/cf.git"
   gem "rake"
 end
 
